@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... */
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 700;
+  color: rgb(0, 89, 255);
+  text-decoration: inherit;
+}
+a:hover {
+  color: #7178fa;
+}
+
+body {
+  margin: 0;
+  min-width: 100vw;  /* Cambio de 100vh a 100vw para evitar problemas de scroll vertical */
+  min-height: 100vh;
+  flex-direction: column;  /* Asegurando que el cuerpo tenga una estructura flexible */
+  justify-content: center; /* Centrado vertical y horizontal */
+  align-items: center;
+ 
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  margin-bottom: 1.5em;  /* Espaciado en la parte inferior */
+  text-align: center; /* Alineación centrada */
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500; 
+  font-family: inherit;
+
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: auto;  /* Asegurar que el botón se ajuste a su contenido */
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Mejoras para la responsividad */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Tailwind Responsividad para texto */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.4em;  /* Tamaño de fuente más pequeño en pantallas medianas */
+  }
+  button {
+    font-size: 0.9em;  /* Botones más pequeños en pantallas pequeñas */
+    padding: 0.5em 1em;  /* Reducción de padding para botones en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;  /* Tamaño de fuente aún más pequeño en pantallas pequeñas */
+  }
+  button {
+    font-size: 0.8em;  /* Botones aún más pequeños en pantallas muy pequeñas */
+    padding: 0.4em 0.8em;  /* Reducción adicional del padding */
+  }
+}
